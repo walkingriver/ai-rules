@@ -1,0 +1,92 @@
+# Angular & Nx Workspace Best Practices
+
+## Architecture & Structure
+
+- Follow Nx project structure with clear domain boundaries
+- Use feature-based organization for components
+- Implement a clean separation between UI and business logic
+- Prefer standalone components and directives
+- Prefer camelCase for variables
+- Prefer kebab-case for selectors
+
+## State Management
+
+- Use @ngrx/signal-store for application- and component-level state
+
+## Performance
+
+- Implement lazy loading for feature modules
+- Use OnPush change detection strategy
+- Implement trackBy in @for directives
+- Optimize bundle size with code splitting
+- Use pure pipes for better change detection
+
+## Code Quality
+
+- Write unit tests with 80%+ coverage
+- Implement end-to-end tests for critical paths
+- Use ESLint and Prettier for code consistency
+- Enforce strict TypeScript configuration
+- Document public APIs with JSDoc
+
+## Security
+
+- Sanitize all user inputs
+- Implement proper authentication and authorization
+- Use HTTP interceptors for request/response handling
+- Protect against XSS and CSRF attacks
+- Implement proper error handling
+
+## Nx Best Practices
+
+- Use Nx affected commands for CI/CD
+- Implement proper project boundaries
+- Use Nx generators for code generation
+- Leverage Nx computation caching
+- Configure proper build targets and configurations
+
+## Angular Features
+
+- Use the new control flow syntax
+- Use strongly typed types and interfaces for all constants, variables, function parameters, and function returns
+- Implement signals for reactive state
+- Use deferrable views for better performance
+- Leverage the new @for and @if syntax
+- Use the new @switch syntax
+- Never use NgModules
+- Never import CommonModule
+- Standalone components are the default; don't use standalone:true on components
+- Use functional items over class-based, such as route guards
+- Use experimental and developer preview features as needed (linkedSignal, httpResource, etc.)
+- Prefer the inject function over constructor injection
+- Signals and simple items should be the only items in a template binding
+- Prefer the aggressive use of computed signals over effects where possible
+- Prefer template forms over reactive forms
+- Don't append Signal to signal variables
+- Always make Signals readonly
+
+## Accessibility
+
+- Ensure proper ARIA attributes
+- Implement keyboard navigation
+- Provide text alternatives for non-text content
+- Ensure sufficient color contrast
+- Test with screen readers
+
+## Documentation
+
+- Document component inputs and outputs
+- Include usage examples
+- Document complex business logic
+- Keep README files updated
+- Document architectural decisions
+
+## Testing Strategy
+
+- Use jest for unit tests, with `test` instead of `it`
+- Follow the testing pyramid
+- Use test doubles effectively
+- Implement integration tests for critical paths
+- Use Storybook for component development
+- Implement visual regression testing
+- Use Playwright and Gherkin for e2e testing
